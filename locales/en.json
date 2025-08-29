@@ -1,0 +1,16 @@
+{
+    "target_label": "Open Parking Meter",
+    "progressbar_label": "Opening Parking Meter",
+
+    "on_cooldown_title": "Error",
+    "on_cooldown_desc": "You can't do this right now.",
+
+    "failed_title": "You failed...",
+    "failed_desc": "You couldn't break open the meter.",
+
+    "lockpick_broke_title": "Lockpick Broke",
+    "lockpick_broke_desc": "Your lockpick snapped while trying to open the meter.",
+
+    "not_enough_police_title": "Error",
+    "not_enough_police_desc": "You can't do this right now."
+}

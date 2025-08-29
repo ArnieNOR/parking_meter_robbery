@@ -1,0 +1,16 @@
+{
+    "target_label": "Åpne Parkometer",
+    "progressbar_label": "Åpner Parkometeret",
+
+    "on_cooldown_title": "Error",
+    "on_cooldown_desc": "Du kan ikke gjøre dette akkurat nå.",
+
+    "failed_title": "Du feilet...",
+    "failed_desc": "Du klarte ikke å bryte opp parkometeret.",
+
+    "lockpick_broke_title": "Dirkesettet ble ødelagt",
+    "lockpick_broke_desc": "Dirkebryteren din knakk mens du prøvde å åpne parkometeret.",
+
+    "not_enough_police_title": "Error",
+    "not_enough_police_desc": "Du kan ikke gjøre dette akkurat nå."
+}
