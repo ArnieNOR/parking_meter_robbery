@@ -4,7 +4,7 @@ local playerCooldown = {}
 
 lib.callback.register('police', function(source)
     local police = exports.jobs:getPoliceCount()
-    if police >= config.policeCount then
+    if police >= Config.PoliceCount then
         return true
     else 
         return false
@@ -12,9 +12,9 @@ lib.callback.register('police', function(source)
 end)
 
 lib.callback.register('success', function(source, cooldownType)
-    local amount = math.random(config.payout.minCash, config.payout.maxCash)
+    local amount = math.random(Config.Payout.minCash, Config.Payout.maxCash)
     exports.ox_inventory:AddItem(source, 'cash', amount)
-    local shouldBreak = math.random(1,100) <= config.breakChance
+    local shouldBreak = math.random(1,100) <= Config.BreakChance
     if shouldBreak then
         exports.ox_inventory:RemoveItem(source, 'lockpick', 1)
         return shouldBreak
@@ -22,7 +22,7 @@ lib.callback.register('success', function(source, cooldownType)
     if not playerCooldown[source] then
         playerCooldown[source] = {}
     end
-    playerCooldown[source][cooldownType] = GetGameTimer() + config.cooldownTime
+    playerCooldown[source][cooldownType] = GetGameTimer() + Config.CooldownTime
     return false
 end)
 

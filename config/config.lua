@@ -1,50 +1,48 @@
-return{
+Config = {}
 
-    lib.locale(),
+lib.locale()
 
-    -- Target
-    target = {
-        icon = 'fa-solid fa-magnifying-glass', -- https://fontawesome.com/
-        label = 'target_label', -- Defined in the locales file.
-    },
+-- Target
+-- 'ox_target'
+-- 'qb-target'
+Config.Target = 'ox_target'
 
-    -- How far you can target the parking meter.
-    targetDistance = 0.7,
+Config.TargetIcon = 'fa-solid fa-magnifying-glass' -- https://fontawesome.com/
 
-    requiredItems = {
-        'lockpick'
-    },
+-- How far you can target the parking meter.
+Config.TargetDistance = 0.7
 
-    -- Police check
-    policeCount = 0,
+Config.RequiredItem = 'lockpick'
 
-    -- Modelhashes
-    meterModels = {
-        2108567945,
-        -1940238623
-    }, 
+-- Police check
+Config.PoliceCount = 0
 
-    -- Progressbar
-    progressBar = {
-        duration = 2000,
-        label = 'progressbar_label'
-    },
+-- Modelhashes
+Config.MeterModels = {
+    2108567945,
+    -1940238623
+}
 
-    -- Payout
-    payout = {
-        minCash = 25,
-        maxCash = 250
-    },
+-- Progressbar
+Config.ProgressBar = {
+    duration = 2000,
+    label = 'progressbar_label'
+}
 
-    -- Cooldown
-    cooldownTime = 20000,
+-- Payout
+Config.Payout = {
+    minCash = 25,
+    maxCash = 250
+}
 
-    -- The chance of lockpick breaking
-    breakChance = 10,
+-- Cooldown
+Config.CooldownTime = 20000
 
-    -- Animation
-    emote = {
-        dict = 'anim@gangops@facility@servers@',
-        clip = 'hotwire'
-    }
+-- The chance of lockpick breaking
+Config.BreakChance = 10
+
+-- Animation
+Config.Emote = {
+    dict = 'anim@gangops@facility@servers@',
+    clip = 'hotwire'
 }

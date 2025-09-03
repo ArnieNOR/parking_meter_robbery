@@ -1,5 +1,3 @@
-local config <const> = require('config.config')
-
 local cooldownType = 'parkingmeter'
 
 lib.locale()
@@ -41,8 +39,8 @@ local function onInteract()
         return
     end
     if lib.progressBar({
-        duration = config.progressBar.duration,
-        label = locale(config.progressBar.label),
+        duration = Config.ProgressBar.duration,
+        label = locale(Config.ProgressBar.label),
         useWhileDead = false,
         canCancel = true,
         disable = {
@@ -51,7 +49,7 @@ local function onInteract()
             combat = true,
             sprint = true
         },
-        anim = config.emote
+        anim = Config.Emote
     }) then 
         local broke = lib.callback.await('success', false, cooldownType)
         if broke then
@@ -64,15 +62,5 @@ local function onInteract()
     end
 end
 
--- Interaction --
-exports.ox_target:addModel(config.meterModels, {
-    {
-        icon = config.target.icon,
-        label = locale(config.target.label),
-        distance = config.targetDistance,
-        items = config.requiredItems,
-        anyItem = true,
-        onSelect = onInteract,
-        serverEvent = 'breakLockpick'
-    }
-})
+
+exports('onInteract', onInteract)

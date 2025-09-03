@@ -11,8 +11,11 @@ version '1.0.0'
 description 'A simple Parkingmeter Robbery script'
 
 -- Manifest
-shared_script '@ox_lib/init.lua'
-
+shared_scripts {
+    '@ox_lib/init.lua',
+    'config/*.lua',
+    'shared/bridge.lua'
+}
 client_scripts {
     'client/client.lua',
 }
@@ -23,5 +26,5 @@ server_scripts {
 
 files {
     'locales/*.json',
-    'config/*.lua',
+    'bridge/**/*.lua',
 }
