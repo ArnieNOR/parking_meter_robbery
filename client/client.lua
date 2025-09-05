@@ -22,7 +22,7 @@ local function onInteract()
     --     return
     -- end
 
-    local isOnCooldown = lib.callback.await('parkingobbery:checkCooldown', false, cooldownType)
+    local isOnCooldown = lib.callback.await('parkingrobbery:checkCooldown', false, cooldownType)
     if isOnCooldown then
         lib.notify({
             title = locale('on_cooldown_title'),
@@ -56,7 +56,7 @@ local function onInteract()
         },
         anim = Config.Emote
     }) then
-        local broke = lib.callback.await('success', false, cooldownType)
+        local broke = lib.callback.await('parkingrobbery:success', false, cooldownType)
         if broke then
             lib.notify({
                 title = locale('lockpick_broke_title'),

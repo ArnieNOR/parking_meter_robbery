@@ -1,6 +1,6 @@
 local playerCooldown = {}
 
-lib.callback.register('success', function(source, cooldownType)
+lib.callback.register('parkingrobbery:success', function(source, cooldownType)
     local amount = math.random(Config.Payout.minCash, Config.Payout.maxCash)
    
     GiveParkingReward(source, amount)
@@ -18,7 +18,7 @@ lib.callback.register('success', function(source, cooldownType)
     return false
 end)
 
-lib.callback.register('parkingobbery:checkCooldown', function(source, cooldownType)
+lib.callback.register('parkingrobbery:checkCooldown', function(source, cooldownType)
     if playerCooldown[source] and playerCooldown[source][cooldownType] then
         return GetGameTimer() < playerCooldown[source][cooldownType]
     end
