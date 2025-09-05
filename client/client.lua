@@ -31,6 +31,9 @@ local function onInteract()
         })
         return
     end
+    if lib.progressActive() then
+        return
+    end
     local success = lib.skillCheck({'easy', 'easy', {areaSize = 60, speedMultiplier = 2}, 'easy'}, {'w', 'a', 's', 'd'})
     if not success then
         lib.notify({
