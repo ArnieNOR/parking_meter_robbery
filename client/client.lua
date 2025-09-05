@@ -1,25 +1,27 @@
 local cooldownType = 'parkingmeter'
 
 lib.locale()
-
-local function police()
-    local policeCheck = lib.callback.await('police', false)
-    if not policeCheck then
-        return false
-    end
-    return true
-end
+-- TODO: Add support for Policecheck
+-- local function police()
+--     local policeCheck = lib.callback.await('police', false)
+--     if not policeCheck then
+--         return false
+--     end
+--     return true
+-- end
 
 -- On Interaction --
 local function onInteract()
-    if not police() then
-        lib.notify({
-            title = locale('not_enough_police_title'),
-            description = locale('not_enough_police_desc'),
-            type = 'error'
-        })
-        return
-    end
+    -- TODO: Add support for Policecheck
+    -- if not police() then
+    --     lib.notify({
+    --         title = locale('not_enough_police_title'),
+    --         description = locale('not_enough_police_desc'),
+    --         type = 'error'
+    --     })
+    --     return
+    -- end
+
     local isOnCooldown = lib.callback.await('parkingobbery:checkCooldown', false, cooldownType)
     if isOnCooldown then
         lib.notify({
@@ -50,7 +52,7 @@ local function onInteract()
             sprint = true
         },
         anim = Config.Emote
-    }) then 
+    }) then
         local broke = lib.callback.await('success', false, cooldownType)
         if broke then
             lib.notify({
