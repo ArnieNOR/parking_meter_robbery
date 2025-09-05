@@ -1,24 +1,16 @@
-local config <const> = require('config.config')
-
 local playerCooldown = {}
-
-lib.callback.register('police', function(source)
-    local police = exports.jobs:getPoliceCount()
-    if police >= Config.PoliceCount then
-        return true
-    else 
-        return false
-    end
-end)
 
 lib.callback.register('success', function(source, cooldownType)
     local amount = math.random(Config.Payout.minCash, Config.Payout.maxCash)
-    exports.ox_inventory:AddItem(source, 'cash', amount)
+   
+    GiveParkingReward(source, amount)
+    
     local shouldBreak = math.random(1,100) <= Config.BreakChance
     if shouldBreak then
-        exports.ox_inventory:RemoveItem(source, 'lockpick', 1)
+        RemoveLockpick(source)
         return shouldBreak
     end
+
     if not playerCooldown[source] then
         playerCooldown[source] = {}
     end
@@ -32,3 +24,13 @@ lib.callback.register('parkingobbery:checkCooldown', function(source, cooldownTy
     end
     return false
 end)
+
+-- TODO: Add support for Policecheck
+-- lib.callback.register('police', function(source)
+--     local police = QBCore.Functions.GetPlayersOnDuty('police')
+--     if police >= Config.PoliceCount then
+--         return true
+--     else 
+--         return false
+--     end
+-- end)

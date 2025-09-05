@@ -1,7 +1,9 @@
- exports.ox_target:addModel(Config.MeterModels, {
+lib.locale()
+
+exports.ox_target:addModel(Config.MeterModels, {
      {
          icon = Config.TargetIcon,
-         label = "temp",
+         label = locale('target_label'),
          distance = Config.TargetDistance,
          items = Config.RequiredItem,
          anyItem = true,

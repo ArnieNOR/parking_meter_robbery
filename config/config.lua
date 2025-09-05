@@ -2,10 +2,14 @@ Config = {}
 
 lib.locale()
 
+Config.Framework = 'standalone'
+
 -- Target
 -- 'ox_target'
 -- 'qb-target'
 Config.Target = 'ox_target'
+
+Config.Inventory = 'ox'
 
 Config.TargetIcon = 'fa-solid fa-magnifying-glass' -- https://fontawesome.com/
 
@@ -18,9 +22,14 @@ Config.RequiredItem = 'lockpick'
 Config.PoliceCount = 0
 
 -- Modelhashes
-Config.MeterModels = {
+Config.MeterModelHashes = {
     2108567945,
-    -1940238623
+    -1940238623,
+}
+
+Config.MeterModels = {
+    'prop_parknmeter_01',
+    'prop_parknmeter_02'
 }
 
 -- Progressbar
