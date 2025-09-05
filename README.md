@@ -9,3 +9,7 @@ Per now it only supports OX and QB's Inventory and Target.
 
 #### Dependencies: 
 ox_lib: https://github.com/overextended/ox_lib
+
+Either ox_inventory or qb-inventory
+
+Either ox_target or qb-target
