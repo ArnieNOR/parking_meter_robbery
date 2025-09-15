@@ -56,12 +56,17 @@ local function onInteract()
         },
         anim = Config.Emote
     }) then
+        lib.notify({
+            title = locale('success_title'),
+            description = locale('success_desc'),
+            type = 'success'
+        })
         local broke = lib.callback.await('parkingrobbery:success', false, cooldownType)
         if broke then
             lib.notify({
                 title = locale('lockpick_broke_title'),
                 description = locale('lockpick_broke_desc'),
-                type = 'error' 
+                type = 'error'
             })
         end
     end

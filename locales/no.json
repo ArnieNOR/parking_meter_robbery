@@ -2,6 +2,9 @@
     "target_label": "Åpne Parkometer",
     "progressbar_label": "Åpner Parkometeret",
 
+    "success_title": "Parkometer åpnet",
+    "success_desc": "Du tok noen mynter.",
+
     "on_cooldown_title": "Error",
     "on_cooldown_desc": "Du kan ikke gjøre dette akkurat nå.",
 

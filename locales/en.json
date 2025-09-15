@@ -2,6 +2,9 @@
     "target_label": "Open Parking Meter",
     "progressbar_label": "Opening Parking Meter",
 
+    "success_title": "Meter Opened",
+    "success_desc": "You grabbed some coins.",
+
     "on_cooldown_title": "Error",
     "on_cooldown_desc": "You can't do this right now.",
 
