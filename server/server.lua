@@ -7,7 +7,7 @@ lib.callback.register('parkingrobbery:success', function(source, cooldownType)
     
     local shouldBreak = math.random(1,100) <= Config.BreakChance
     if shouldBreak then
-        RemoveLockpick(source)
+        RemoveItem(source)
         return shouldBreak
     end
 
