@@ -3,5 +3,12 @@ if not QBCore then
 end
 
 function RemoveLockpick(source)
-    exports['qb-inventory']:RemoveItem(source, 'lockpick', 1, false)
+    local lockpick = exports['qb-inventory']:GetItemCount(source, 'lockpick')
+
+        if lockpick >= 1 then 
+            exports['qb-inventory']:RemoveItem(source, 'lockpick', 1, false)
+            return
+        else
+        exports['qb-inventory']:RemoveItem(source, 'advancedlockpick', 1, false)
+    end
 end
