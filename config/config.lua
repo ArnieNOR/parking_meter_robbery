@@ -2,31 +2,45 @@ Config = {}
 
 lib.locale()
 
+-- Supported Frameworks
+-- 'qb-core'
+-- 'ox_core'
+-- 'qbx_core' (not supported yet)
+-- 'standalone'
 Config.Framework = 'standalone'
 
--- Target
+-- Supported Targets
 -- 'ox_target'
 -- 'qb-target'
 Config.Target = 'ox_target'
 
+-- Supported Inventories
+-- 'ox'
+-- 'qb'
 Config.Inventory = 'ox'
 
+-- The icon that shows when you target
 Config.TargetIcon = 'fa-solid fa-magnifying-glass' -- https://fontawesome.com/
 
--- How far you can target the parking meter.
+-- How far you can target
 Config.TargetDistance = 0.7
 
-Config.RequiredItem = 'lockpick'
+-- Usable items
+Config.RequiredItem = {
+    'lockpick',
+    'advancedlockpick'
+}
 
--- Police check
+-- Police check (Not used for now)
 Config.PoliceCount = 0
 
--- Modelhashes
+-- Modelhashes (Not used, but added just in case)
 Config.MeterModelHashes = {
     2108567945,
     -1940238623,
 }
 
+-- Models
 Config.MeterModels = {
     'prop_parknmeter_01',
     'prop_parknmeter_02'
